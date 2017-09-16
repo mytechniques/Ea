@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ea/Scripts/Editor/EaFinder.cs">
+    <Files>
+      <File FileName="Assets/Ea/Scripts/Debug/SceneA.cs" Line="5" Column="36" />
+      <File FileName="Assets/Ea/Scripts/Core/System/EaExtension.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Core/Component/EaMobile.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Core/Component/EaSceneManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Core/Component/EaSceneObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Debug/SceneB.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Debug/Scene.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Core/System/EaSystem.cs" Line="16" Column="3" />
+      <File FileName="Assets/Ea/Scripts/Editor/EaFinder.cs" Line="101" Column="43" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

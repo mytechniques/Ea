@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{CE49FE25-766B-17ED-1F1E-E29599FB5CF8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_1_0;UNITY_2017_1;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;PLATFORM_ANDROID;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ODIN_INSPECTOR;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>/Applications/Unity 2017/Unity.app/Contents/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>/Applications/Unity 2017/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\AssetListExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\BoxGroupExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ButtonAndButtonGroupExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ColorPaletteExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\CombineGroupAttributeExample1.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\CombineGroupAttributeExample2.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\CombineGroupAttributeExample3.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\CustomContextMenuExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\DictionaryExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\DisableAndDisabledIfExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\DisableContextMenuExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\DisableInEditorAndPlayModeExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\DisplayAsStringExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\EnumToggleButtonsExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\FoldoutGroupAttributeExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\GUIColorExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\HideInEditorAndPlayModeExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\HideLabelExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\HideReferenceObjectPickerExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\HorizontalGroupAttributeExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\IncorrectUseOfOdinSerializeAttributeExamples1.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\IncorrectUseOfOdinSerializeAttributeExamples2.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\IndentExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\InfoBoxExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\InlineEditorExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\InlinePropertyExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\LabelTextExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ListExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\MinMaxSliderExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\MinMaxValueValueExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\MultiLinePropertyExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\NoBoilerplate.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\OnInspectorGUIExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\OnValueChangedExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\PrefabRelatedAttributesExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\PropertyOrderExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\PropertyTooltipExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\QuaternionAndVectorExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ReadOnlyExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\RequiredExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\SceneAndAssetsOnlyExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\SerializeAnything.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ShowAndHideIfExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ShowInInspectorExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ShowPropertiesInTheInspectorExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\TabExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\TitleExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\TitleGroupExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ToggleExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ToggleLeftExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ValidateInputExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\ValueDropdownExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Attribute Examples\WrapExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\ContextExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\CustomDrawerExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\CustomGroupExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\GenericDrawerExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\GenericMenuExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\HealthBarExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\PriorityExamples.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\ReflectionExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\StringMemberHelperExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Custom Drawer Examples\ValidationExample.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\ObjectPlacementFunction.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\ObjectPlacer.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlaceableObject.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\CirclePlacementFunction.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\RandomPlacementFunction.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SineWavePlacementFunction.cs" />
+     <Compile Include="Assets\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SpirographPlacementFunction.cs" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
+     <None Include="Assets\Plugins\Sirenix\Readme.txt" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\link.xml" />
+     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.OdinInspector.Attributes">
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.OdinInspector.Editor">
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.Serialization.Config">
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.Serialization">
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.Utilities">
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+ </Reference>
+ <Reference Include="Sirenix.Utilities.Editor">
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
