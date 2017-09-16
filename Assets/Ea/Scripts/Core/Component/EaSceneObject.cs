@@ -28,11 +28,12 @@ namespace Ea{
 			Save ();
 
 		}
-		public virtual void Unload(){}
+		public abstract void Unload (string scene);
 
 	}
 
 	public abstract class EaSceneObject  : MonoBehaviour, ISaveTransform{
+		[Sirenix.OdinInspector.BoxGroup("SceneObject")]
 		public string scene;
 		public RectTransform rect{ get; set;}
 		public virtual void Save(){
@@ -56,7 +57,7 @@ namespace Ea{
 			Save ();
 
 		}
-		public virtual void Unload(){}
+		public abstract void Unload (string scene);
 
 	}
 	public abstract class EaSceneObject<T> : EaSceneObject,ISaveData<T>{
@@ -70,7 +71,7 @@ namespace Ea{
 	public interface ISaveable{	
 		void Save();
 		void Load();
-		void Unload();
+		void Unload(string scene);
 
 	}
 

@@ -271,6 +271,9 @@ public  static class EaExtension {
 		return new Vector2 (x, y);
 	}
 
+		public static void Call(this IEnumerator enumerator,MonoBehaviour behaviour){
+			behaviour.StartCoroutine (enumerator);
+		}
 	/// <summary>
 	/// Call the specified event if not null.
 	/// </summary>

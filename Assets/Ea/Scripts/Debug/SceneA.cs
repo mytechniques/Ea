@@ -4,7 +4,7 @@ using UnityEngine;
 using Ea;
 public class SceneA : EaWorldObject{
 	
-	public override void Unload ()
+	public override void Unload (string scene)
 	{
 		gameObject.SetActive (false);
 	}

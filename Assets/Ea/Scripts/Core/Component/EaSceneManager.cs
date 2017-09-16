@@ -34,7 +34,7 @@ namespace Ea
 			foreach (KeyValuePair<string,List<ISaveable>> unloadScene in scenes) {
 				if (unloadScene.Key != scene) {
 					unloadScene.Value.ForEach (s => {
-						s.Unload ();
+						s.Unload (scene);
 						reloaded += s.ToString () + "\n";
 		
 					});

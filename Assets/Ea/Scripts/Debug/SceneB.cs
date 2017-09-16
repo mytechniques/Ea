@@ -5,9 +5,9 @@ using Ea;
 public class SceneB : EaSceneObject {
 	
 
-	public override void Unload ()
+	public override void Unload (string scene)
 	{
-		base.Unload ();
+//		base.Unload (string );
 		gameObject.SetActive (false);
 	}
 	public override void Load ()

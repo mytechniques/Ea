@@ -121,7 +121,7 @@ namespace Ea{
 
 	}
 	public class EaDevice{
-		public const string dataPathDirectory = "/Ea/File";
+		public const string dataPathDirectory = "/Ea/Files";
 		public const string fileType  = ".json";
 		public static string dataPath<T>()where T : IEaSerializable{
 			return (Path.Combine(path , typeof(T).Name.brackets() + fileType));
