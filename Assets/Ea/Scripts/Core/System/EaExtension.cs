@@ -3,6 +3,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Ea{
 #region STRUCTURE
@@ -36,14 +37,20 @@ public struct EaPredicate{
 
 #endregion
 #region ENUMERATOR
-public enum ShortNumberUnit {
+	/// <summary>
+	/// shorthand write for Short Number Unit
+	/// </summary>
+public enum SNUnit {
 	None,
 	Kilo,
 	Million,
 	Billion,
 	Trillion
 }
-public enum ShortNumberMethod {
+	/// <summary>
+	/// shorthand write for Short Number Method
+	/// </summary>
+public enum  SNMethod{
 	None,
 	Round,
 	Floor
@@ -61,12 +68,7 @@ public  static class EaExtension {
 			
 			return @collection;
 	}
-		public static Dictionary<T,V> NullCheck<T,V>(this Dictionary<T,V> collection,T key) where V : new(){
-			if (!collection.ContainsKey (key))
-				collection.Add (key, new V());
-			
-			return collection;
-		}
+
 	public static Vector2 abs(this Vector2 value){
 		return new Vector2 (value.x < 0 ? -value.x : value.x, value.y < 0 ? -value.y : value.y);
 	}
@@ -100,6 +102,19 @@ public  static class EaExtension {
 	}
 	#endregion
 	#region B
+		public static Dictionary<T,V> NullCheck<T,V>(this Dictionary<T,V> collection,T key) where V : new(){
+			if (!collection.ContainsKey (key))
+				collection.Add (key, new V());
+
+			return collection;
+		}
+
+
+
+		public static float begin_count(this float start){
+			Debug.Log ("Counting...");
+			return Time.realtimeSinceStartup;
+		}
 	public static string brackets(this string inside){
 		return "(" + inside + ")";
 	}
@@ -361,8 +376,11 @@ public  static class EaExtension {
 	/// </summary>
 	/// <returns>The count.</returns>
 	/// <param name="value">Value.</param>
-	public static float end_count(this float value){
-		return Time.realtimeSinceStartup - value;
+		public static float end_count(this float value,bool logResult = true,int displayLength = 2){
+			float result = Time.realtimeSinceStartup - value;
+			if(logResult)
+				Debug.Log("Counting complete: " + result); 
+			return result;
 
 	}
 
@@ -469,6 +487,14 @@ public  static class EaExtension {
 	#endregion
 
 	#region M
+		/// <summary>
+		/// Count how many time value appear in this string
+		/// </summary>
+		/// <returns>The count.</returns>
+		public static int match_count(this string text, string match){
+			return	Regex.Matches (Regex.Escape (text), match,RegexOptions.Singleline).Count;
+		
+		}
 	public static string match(this string value,bool caseSensitive,params EaMatchCollection [] matchCollections){
 		value = !caseSensitive ? value.ToLower () : value;
 		int length = matchCollections.Length;
@@ -507,6 +533,21 @@ public  static class EaExtension {
 				((shiftMethod & Shift.Right) == Shift.Right ? newValue : ""));
 			
 	}
+
+		/// <summary>
+		/// Replace first match.
+		/// </summary>
+		/// <param name="text">Text.</param>
+		/// <param name="match">Match.</param>
+		/// <param name="replacement">Replacement.</param>
+		public static string replace1(this string text,string match,string replacement,Shift shift = Shift.None){
+			int pos = text.IndexOf (match);
+			if (pos < 0)
+				return text;
+			return  (shift.equals(Shift.Left) ? replacement : "") +  text.Substring (0, pos) + 
+				(shift.equals(Shift.None) ? replacement : "") + text.Substring (pos + match.Length) + (shift.equals(Shift.Right) ? replacement : "");	
+		}
+
 		//01 | 10 11 &  01 -> 01  -> 10 10 & 11  -> 10
 		/// <summary>
 		/// Replacement string, using shift operator to shift the text instead of replace it 
@@ -547,8 +588,19 @@ public  static class EaExtension {
 		list.Add (item);
 		return list;
 
-	}	
-
+	}	/// <summary>
+	/// Rounds the max.
+	/// </summary>
+	/// <returns>The max.</returns>
+	/// <param name="value">Value.</param>
+	/// <param name="max">Max.</param>
+	/// <param name="mutipler">Mutipler.</param>
+		public static int  round_max(this int value,int max, int mutipler){
+			if (value > max || max / 2 < value) 
+				return max;
+			return value.round_max (max / 2, mutipler);
+		
+		}
 	public static int round(this float value){
 		return Mathf.RoundToInt(value);
 	}
@@ -578,22 +630,24 @@ public  static class EaExtension {
 		value = Time.realtimeSinceStartup;
 	}
 
+		public static string short_number(
+			this double value,int length  = 0,SNMethod sortingMethod = default(SNMethod),
+			int below1000Length = 0, string thousandPredicate = "K",
+			string millionPredicate="M" , string billionPredicate = "B",
+			string trillionPredicate = "T",	string overloadPredicate =""){
 
-	public static string short_number(this double value,int length  = 0,ShortNumberMethod sortingMethod = default(ShortNumberMethod),int no_predicate_length = 0,
-		string thousandPredicate = "K" ,string millionPredicate="M" ,string billionPredicate = "B" , string trillionPredicate = "T",string overloadPredicate =""){
-		double pred = value.abs ();
-
-		ShortNumberUnit kUnit = pred < 1000 ? ShortNumberUnit.None: pred >= 1000 && pred <  1000000 ? ShortNumberUnit.Kilo:
-		pred >= 1000000 && pred < 1000000000 ? ShortNumberUnit.Million:   
-		pred >= 1000000000 && pred < 1000000000000 ? ShortNumberUnit.Billion :ShortNumberUnit.Trillion;
+			double pred = value.abs ();
+			SNUnit kUnit = pred < 1000 ? SNUnit.None: pred >= 1000 && pred <  1000000 ? SNUnit.Kilo:
+				pred >= 1000000 && pred < 1000000000 ? SNUnit.Million:   
+				pred >= 1000000000 && pred < 1000000000000 ? SNUnit.Billion :SNUnit.Trillion;
 
 
 	
 		
 		string defaultPredicate = "##.", resultPredicate = "";
 		string trunc = defaultPredicate;
-		if (kUnit == ShortNumberUnit.None) {
-			for (int i = 0; i < no_predicate_length; i++)
+			if (kUnit == SNUnit.None) {
+			for (int i = 0; i < below1000Length; i++)
 				trunc += "#";
 		} else {
 			for (int i = 0; i < length; i++)
@@ -602,29 +656,29 @@ public  static class EaExtension {
 
 		trunc = trunc == defaultPredicate ? "##": trunc;
 		if(value > Int32.MaxValue && value < Int32.MinValue) 
-			value = sortingMethod == ShortNumberMethod.Round ? value.round () : sortingMethod == ShortNumberMethod.Floor ? value.floor () : value;
+				value = sortingMethod == SNMethod.Round ? value.round () : sortingMethod == SNMethod.Floor ? value.floor () : value;
 
 		double tResult = 0;
 		switch (kUnit) {
-		case ShortNumberUnit.None:
+			case SNUnit.None:
 			tResult = value;
 			resultPredicate = "";
 			break;
 		
-		case ShortNumberUnit.Kilo:
+			case SNUnit.Kilo:
 			tResult = (value / 1000);
 			resultPredicate = thousandPredicate;
 			break;
 
-		case ShortNumberUnit.Million:
+			case SNUnit.Million:
 			tResult = (value / 1000000);
 			resultPredicate = millionPredicate;
 			break;
-		case ShortNumberUnit.Billion:
+			case SNUnit.Billion:
 			tResult = (value / 1000000000);
 			resultPredicate = billionPredicate;
 			break;
-		case ShortNumberUnit.Trillion:
+			case SNUnit.Trillion:
 			tResult = (value / 1000000000000);
 			resultPredicate = trillionPredicate;
 			break;
@@ -633,7 +687,7 @@ public  static class EaExtension {
 			return 0.ToString ();
 			
 		if (tResult.abs () > 1000) {
-			return tResult.short_number (length, sortingMethod, no_predicate_length,
+				return tResult.short_number (length, sortingMethod, below1000Length,
 				thousandPredicate, millionPredicate, billionPredicate, trillionPredicate,resultPredicate + overloadPredicate);
 
 		}
@@ -658,30 +712,42 @@ public  static class EaExtension {
 	
 		return string.Format ("<size={0}>", size) + value + "</size>";
 	}
+	
+	
 	#endregion
 	#region T
 	public static float tan(this float value){
 		return Mathf.Tan (value);
 	}
 	#endregion
-	
-	}
 
-
-
-}
-namespace Ea.Editor{
-	public static class EaEditorExtension{
-		#region EDITOR
-		#if UNITY_EDITOR
-		public static Texture GetUnityTexture<T>(){
-			return UnityEditor.EditorGUIUtility.ObjectContent (null, typeof(T)).image;
-
+		#region P
+		public static float pow2(this float value){
+			return Mathf.Pow(value,2);
 		}
-		public static T ObjectField<T>(T value,bool allowSeneObject = false) where T : UnityEngine.Object{
-			return (T)UnityEditor.EditorGUILayout.ObjectField (value, typeof(T), allowSeneObject);
+		public static float pow(this float value,float pow){
+			return Mathf.Pow(value,pow);
 		}
-		#endif
 		#endregion
 	}
+
+
+	namespace Editor{
+		public static class EaEditorExtension{
+			#region EDITOR
+			#if UNITY_EDITOR
+			public static Texture GetUnityTexture<T>(){
+				return UnityEditor.EditorGUIUtility.ObjectContent (null, typeof(T)).image;
+
+			}
+			public static T ObjectField<T>(T value,bool allowSeneObject = false) where T : UnityEngine.Object{
+				return (T)UnityEditor.EditorGUILayout.ObjectField (value, typeof(T), allowSeneObject);
+			}
+		
+			#endif
+			#endregion
+		}
+	}
+
+
 }

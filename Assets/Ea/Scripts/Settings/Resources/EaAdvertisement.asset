@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7ca57e27540431a868180399dd605c, type: 3}
+  m_Name: EaAdvertisement
+  m_EditorClassIdentifier: 
+  isSingleBanner: 0
+  googleDebug: 0
+  eaDebug: 1
+  banner: ca-app-pub-3879807251614613/1317181881
+  bannerTop: ca-app-pub-3879807251614613/1317181881
+  bannerBottom: ca-app-pub-3879807251614613/1317181881
+  adSize: 1
+  interstitial: ca-app-pub-3879807251614613/2390652689

@@ -9,13 +9,17 @@ namespace Ea
 		public static Dictionary<string,List<ISaveable>> scenes{
 			get
 			{	
+				if (_scenes == null)
+					Initialize ();
+
+
 				return _scenes ?? (_scenes = new Dictionary<string,List<ISaveable>> ());
 			
 			}
 			set{ _scenes = value;}
 		}
 		public static void Initialize(){
-			Debug.Log ("Total scene: " + scenes.Count);
+			Debug.Log ("EaSceneManager Initialized!".color("0000FF"));
 			
 		}
 		/// <summary>
@@ -28,7 +32,7 @@ namespace Ea
 						s.Load ();
 						reloaded += s.ToString () + "\n";
 					});
-					Debug.Log ("Load scene:" + scene + "\ntotal object: " + scenes [scene].Count + "\n" + reloaded);
+//					Debug.Log ("Load scene:" + scene + "\ntotal object: " + scenes [scene].Count + "\n" + reloaded);
 					
 			reloaded = string.Empty;
 			foreach (KeyValuePair<string,List<ISaveable>> unloadScene in scenes) {
@@ -38,7 +42,7 @@ namespace Ea
 						reloaded += s.ToString () + "\n";
 		
 					});
-					Debug.Log ("Unload scene:" + unloadScene.Key + "\ntotal object: " + unloadScene.Value.Count + "\n" + reloaded);
+//					Debug.Log ("Unload scene:" + unloadScene.Key + "\ntotal object: " + unloadScene.Value.Count + "\n" + reloaded);
 
 				}
 			}

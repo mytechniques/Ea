@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Layer
+    uniqueID: 2130416977
+    locked: 0
+  - name: Eru
+    uniqueID: 1451900201
+    locked: 0

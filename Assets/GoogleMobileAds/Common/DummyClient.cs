@@ -14,7 +14,7 @@
 
 using System;
 using System.Reflection;
-
+using Ea;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
@@ -25,12 +25,13 @@ namespace GoogleMobileAds.Common
     {
         public DummyClient()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         // Disable warnings for unused dummy ad events.
+		EaAdvertisement _adSetting;
+		public EaAdvertisement adSetting{get{ return _adSetting ?? (_adSetting = Resources.Load<EaAdvertisement> (typeof(EaAdvertisement).Name));}}
         #pragma warning disable 67
-
         public event EventHandler<EventArgs> OnAdLoaded;
 
         public event EventHandler<AdFailedToLoadEventArgs> OnAdFailedToLoad;
@@ -53,130 +54,130 @@ namespace GoogleMobileAds.Common
         {
             get
             {
-                Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+                if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
                 return "UserId";
             }
 
             set
             {
-                Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+                if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
             }
         }
 
         public void CreateBannerView(string adUnitId, AdSize adSize, AdPosition position)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void CreateBannerView(string adUnitId, AdSize adSize, int positionX, int positionY)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void LoadAd(AdRequest request)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void ShowBannerView()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void HideBannerView()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void DestroyBannerView()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void CreateInterstitialAd(string adUnitId)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public bool IsLoaded()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
             return true;
         }
 
         public void ShowInterstitial()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void DestroyInterstitial()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void CreateRewardBasedVideoAd()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void SetUserId(string userId)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void LoadAd(AdRequest request, string adUnitId)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void DestroyRewardBasedVideoAd()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void ShowRewardBasedVideoAd()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void CreateAdLoader(AdLoader.Builder builder)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void Load(AdRequest request)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void CreateNativeExpressAdView(string adUnitId, AdSize adSize, AdPosition position)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void CreateNativeExpressAdView(string adUnitId, AdSize adSize, int positionX, int positionY)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void SetAdSize(AdSize adSize)
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void ShowNativeExpressAdView()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void HideNativeExpressAdView()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
 
         public void DestroyNativeExpressAdView()
         {
-            Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
+            if(adSetting.googleDebug) Debug.Log("Dummy " + MethodBase.GetCurrentMethod().Name);
         }
     }
 }
