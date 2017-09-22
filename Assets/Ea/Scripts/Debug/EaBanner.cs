@@ -7,7 +7,6 @@ public  class EaBanner : MonoBehaviour  {
 	public RectTransform rect{get{ return _rect ?? (_rect = GetComponent<RectTransform> ());}}
 	private RectTransform _rect;
 		public void CloseAd(){
-			Debug.Log (":CKI");
 			Destroy (gameObject);
 		}
 		public void ClickAd(){

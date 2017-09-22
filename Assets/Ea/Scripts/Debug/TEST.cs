@@ -17,7 +17,8 @@ public class TEST : MonoBehaviour {
 				Ea.EaSceneManager.Load ("game");
 			if (Input.GetKeyDown (KeyCode.Alpha2) || Input.touchCount == 3)
 				Ea.EaSceneManager.Load ("game1");
-			
+			if(Input.GetKeyDown(KeyCode.R))
+				UnityEngine.SceneManagement.SceneManager.LoadScene(0x00);
 				
 		}
 	}

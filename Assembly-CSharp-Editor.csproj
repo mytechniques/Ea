@@ -87,6 +87,7 @@
      <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Readme.txt" />
+     <None Include="Assets\Ea\Files\(EaDictionary`2)Int32.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
      <None Include="Assets\Ea\Files\(EaDictionary`2)Object.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />

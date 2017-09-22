@@ -130,6 +130,7 @@
      <Compile Include="Assets\Ea\Scripts\Core\Pattern\PoolManager.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Pattern\PoolMechanism.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Pattern\Singleton.cs" />
+     <Compile Include="Assets\Ea\Scripts\Core\System\EaConstant.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\System\EaExtension.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\System\EaSystem.cs" />
      <Compile Include="Assets\Ea\Scripts\Debug\EaBanner.cs" />
@@ -378,6 +379,7 @@
      <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Readme.txt" />
+     <None Include="Assets\Ea\Files\(EaDictionary`2)Int32.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
      <None Include="Assets\Ea\Files\(EaDictionary`2)Object.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />

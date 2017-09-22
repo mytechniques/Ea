@@ -8,6 +8,8 @@ public class EaAdManager : Singleton<EaAdManager> {
 	void Start () {
 		EaMobile.Initialize (Mobile.Advertisement);
 		EaAdvertisement.Create (AdType.BANNER_TOP, AdType.BANNER_BOTTOM, AdType.INTERSTITIAL);
+		//		Debug.Log(EaSceneObject.
+		EaFileSystem.SetInt("hellu",5);
 	}
 
 

@@ -7,31 +7,13 @@ using System.Text.RegularExpressions;
 
 namespace Ea{
 #region STRUCTURE
-[Serializable]
-public struct EaMatchCollection{
-	public readonly string key,value;
-	public EaMatchCollection(string key ,string value)
-	{
-		this.key = key;
-		this.value = value;
-	}
 
-}
 	[Flags]
-public enum Shift{
+public enum BitShift{
 		None = 0x00,
 		Left = 0x01,
 		Right = 0x02,
 	}
-public struct EaPredicate{
-	public readonly bool condition;
-	public readonly Action action;
-	public EaPredicate(bool condition,Action action){
-		this.condition = condition;
-		this.action = action;
-	}
-
-}
 #endregion
 #region INTERFACE
 
@@ -495,16 +477,7 @@ public  static class EaExtension {
 			return	Regex.Matches (Regex.Escape (text), match,RegexOptions.Singleline).Count;
 		
 		}
-	public static string match(this string value,bool caseSensitive,params EaMatchCollection [] matchCollections){
-		value = !caseSensitive ? value.ToLower () : value;
-		int length = matchCollections.Length;
-		for(int i = 0;i<length;i++){
-			if((!caseSensitive ? matchCollections[i].key.ToLower(): matchCollections[i].key).Contains(value))
-				return matchCollections[i].value;	
-			
-		}
-		return "";
-	}
+
 	#endregion
 	#region N
 	public static float negative(this float value){
@@ -527,10 +500,10 @@ public  static class EaExtension {
 	public static string remove(this string @this,string value){
 			return @this.Replace (value, "");
 	}
-		public static string replace(this string @this,string oldValue,string newValue,Shift shiftMethod){
-			return @this = @this.Replace (oldValue,((shiftMethod & Shift.Left) == Shift.Left ? newValue : "") + 
-				((shiftMethod  & Shift.Left) == Shift.Left || (shiftMethod & Shift.Right) == Shift.Right ? 	oldValue : "") +  
-				((shiftMethod & Shift.Right) == Shift.Right ? newValue : ""));
+		public static string replace(this string @this,string oldValue,string newValue,BitShift shiftMethod){
+			return @this = @this.Replace (oldValue,((shiftMethod & BitShift.Left) == BitShift.Left ? newValue : "") + 
+				((shiftMethod  & BitShift.Left) == BitShift.Left || (shiftMethod & BitShift.Right) == BitShift.Right ? 	oldValue : "") +  
+				((shiftMethod & BitShift.Right) == BitShift.Right ? newValue : ""));
 			
 	}
 
@@ -540,12 +513,12 @@ public  static class EaExtension {
 		/// <param name="text">Text.</param>
 		/// <param name="match">Match.</param>
 		/// <param name="replacement">Replacement.</param>
-		public static string replace1(this string text,string match,string replacement,Shift shift = Shift.None){
+		public static string replace1(this string text,string match,string replacement,BitShift shift = BitShift.None){
 			int pos = text.IndexOf (match);
 			if (pos < 0)
 				return text;
-			return  (shift.equals(Shift.Left) ? replacement : "") +  text.Substring (0, pos) + 
-				(shift.equals(Shift.None) ? replacement : "") + text.Substring (pos + match.Length) + (shift.equals(Shift.Right) ? replacement : "");	
+			return  (shift.equals(BitShift.Left) ? replacement : "") +  text.Substring (0, pos) + 
+				(shift.equals(BitShift.None) ? replacement : "") + text.Substring (pos + match.Length) + (shift.equals(BitShift.Right) ? replacement : "");	
 		}
 
 		//01 | 10 11 &  01 -> 01  -> 10 10 & 11  -> 10
@@ -555,10 +528,10 @@ public  static class EaExtension {
 		/// <param name="this">This.</param>
 		/// <param name="oldValues">Old values.</param>
 		/// <param name="newValue">New value.</param>
-		public static string replace(this string @this,string [] oldValues,string newValue,Shift shiftMethod){
-//			Shift shift = newValue.Contains ("<<") ? -1 : newValue.Contains (">>") ? 1 : 0;
-//			Debug.Log("SL"  + (shiftMethod & Shift.Left ));
-//			Debug.Log (shiftMethod & Shift.Right);
+		public static string replace(this string @this,string [] oldValues,string newValue,BitShift shiftMethod){
+//			BitShift shift = newValue.Contains ("<<") ? -1 : newValue.Contains (">>") ? 1 : 0;
+//			Debug.Log("SL"  + (shiftMethod & BitShift.Left ));
+//			Debug.Log (shiftMethod & BitShift.Right);
 
 			int length = oldValues.Length;
 			for (int i = 0; i < length; i++)
@@ -637,9 +610,9 @@ public  static class EaExtension {
 			string trillionPredicate = "T",	string overloadPredicate =""){
 
 			double pred = value.abs ();
-			SNUnit kUnit = pred < 1000 ? SNUnit.None: pred >= 1000 && pred <  1000000 ? SNUnit.Kilo:
-				pred >= 1000000 && pred < 1000000000 ? SNUnit.Million:   
-				pred >= 1000000000 && pred < 1000000000000 ? SNUnit.Billion :SNUnit.Trillion;
+			SNUnit kUnit = pred < EaConstant.thousand ? SNUnit.None: pred >= EaConstant.thousand && pred <  EaConstant.million ? SNUnit.Kilo:
+				pred >= EaConstant.million && pred < EaConstant.billion ? SNUnit.Million:   
+				pred >= EaConstant.trillion && pred < EaConstant.trillion ? SNUnit.Billion :SNUnit.Trillion;
 
 
 	
@@ -666,27 +639,27 @@ public  static class EaExtension {
 			break;
 		
 			case SNUnit.Kilo:
-			tResult = (value / 1000);
+				tResult = (value / EaConstant.thousand);
 			resultPredicate = thousandPredicate;
 			break;
 
 			case SNUnit.Million:
-			tResult = (value / 1000000);
+				tResult = (value /EaConstant.million);
 			resultPredicate = millionPredicate;
 			break;
 			case SNUnit.Billion:
-			tResult = (value / 1000000000);
+				tResult = (value / EaConstant.billion);
 			resultPredicate = billionPredicate;
 			break;
 			case SNUnit.Trillion:
-			tResult = (value / 1000000000000);
+				tResult = (value /EaConstant.trillion);
 			resultPredicate = trillionPredicate;
 			break;
 		}
 		if (tResult.abs() < 1)
 			return 0.ToString ();
 			
-		if (tResult.abs () > 1000) {
+			if (tResult.abs () > EaConstant.thousand) {
 				return tResult.short_number (length, sortingMethod, below1000Length,
 				thousandPredicate, millionPredicate, billionPredicate, trillionPredicate,resultPredicate + overloadPredicate);
 
