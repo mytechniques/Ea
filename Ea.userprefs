@@ -1,6 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GooglePlayGames/Platforms/Android/AndroidTokenClient.cs">
+    <Files>
+      <File FileName="Assets/Ea/Scripts/Core/System/EaSystem.cs" Line="13" Column="24" />
+      <File FileName="Assets/Ea/Scripts/Useable/EaAdManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Useable/EaFileSystem.cs" Line="1" Column="1" />
+      <File FileName="Assets/Ea/Scripts/Core/Collection/EaDictionary.cs" Line="1" Column="1" />
+      <File FileName="Assets/GooglePlayGames/Platforms/Android/AndroidTokenClient.cs" Line="385" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -12,18 +12,16 @@ using System.Linq;
 using System;
 using System.Threading;
 [Serializable]
-public class EaSerializable : IEaSerializable {
+public class EaSerializable : Ea.IEaSerializable {
 	public  string path{get;set;}
 	public bool cryption { get; set;}
 }
-public interface IEaSerializable {
-	string path{ get; set;}
-	bool cryption{get;set;}
-}
+
 namespace Ea{
-//	[Serializable]
-
-
+	public interface IEaSerializable {
+		string path{ get; set;}
+		bool cryption{get;set;}
+	}
 	public static class EaJson{
 		public static string json_encode<T>(this T @object){
 			 return JsonUtility.ToJson(@object);
@@ -178,11 +176,10 @@ namespace Ea{
 		static EaDictionary<string,bool> _dataBool;
 		static EaDictionary<string,string> _dataString;
 
-		public static EaDictionary<string,float> dataFloat{get{return _dataFloat ?? (_dataFloat =  LoadData<float>( ));}}
-		public	static EaDictionary<string,int> dataInt{get{ return _dataInt ??(_dataInt =  LoadData<int>( ));}}
-		public	static EaDictionary<string,bool> dataBool{get {return _dataBool ??(_dataBool = LoadData<bool>( ));}}
-		public	static EaDictionary<string,string>dataString{get{ return _dataString ?? (_dataString = LoadData<string>( ));}}
-
+		public static EaDictionary<string,float> dataFloat{get{return _dataFloat ?? (_dataFloat =  LoadData<float>());}}
+		public	static EaDictionary<string,int> dataInt{get{ return _dataInt ??(_dataInt =  LoadData<int>());}}
+		public	static EaDictionary<string,bool> dataBool{get {return _dataBool ??(_dataBool = LoadData<bool>());}}
+		public	static EaDictionary<string,string>dataString{get{ return _dataString ?? (_dataString = LoadData<string>());}}
 
 		#endregion
 

@@ -5,15 +5,9 @@ using Ea;
 using UnityEngine.Advertisements;
 
 public class EaAdManager : Singleton<EaAdManager> {
-	
 	void Start () {
 		EaMobile.Initialize (Mobile.Advertisement);
 		EaAdvertisement.Create (AdType.BANNER_TOP, AdType.BANNER_BOTTOM, AdType.INTERSTITIAL);
-//		EaDictionary<string,string> test = new EaDictionary<string, string> (){ { "hello","world" },{"hi","eru"} };
-//		EaFileSystem.SetInt("Hello",999);
-		Debug.Log (EaFileSystem.GetInt ("Hello"));
-	
-
 	}
 
 

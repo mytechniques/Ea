@@ -75,7 +75,7 @@ namespace Ea{
 			throw new KeyNotFoundException (key + "not exist,please check again!");
 		
 			_Keys.RemoveAt (index);
-		_Values.RemoveAt (index);
+			_Values.RemoveAt (index);
 			Dictionary.Remove (key);
 
 	
@@ -92,6 +92,7 @@ namespace Ea{
 			if (index == -1)
 				throw new KeyNotFoundException (key + "not exist,please check again!");
 
+				Debug.Log (index + "," + Keys.Count + ","+ Values.Count);
 			return _Values [index];
 		}
 		set

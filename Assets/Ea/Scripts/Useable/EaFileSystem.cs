@@ -12,7 +12,7 @@ public  static class EaFileSystem  {
 	#region GET
 	static T GetValue<T>(EaDictionary<string,T> collection,string key){
 		if (collection.ContainsKey (key))
-			return collection [key];
+			return (T)collection [key];
 
 		Debug.LogErrorFormat("Key: {0} not found , return default value!",key);
 		return default(T);
@@ -33,6 +33,7 @@ public  static class EaFileSystem  {
 		return GetValue (EaSystem.dataBool, key);
 
 	}
+
 
 	#endregion
 	#region SET
