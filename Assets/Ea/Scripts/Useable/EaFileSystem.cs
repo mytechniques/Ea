@@ -10,7 +10,7 @@ public  static class EaFileSystem  {
 		return EaSystem.Open <T>(fileName,security);
 	}
 	#region GET
-	static T GetValue<T>(Dictionary<string,T> collection,string key){
+	static T GetValue<T>(EaDictionary<string,T> collection,string key){
 		if (collection.ContainsKey (key))
 			return collection [key];
 

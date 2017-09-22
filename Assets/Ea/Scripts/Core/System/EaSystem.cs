@@ -173,30 +173,90 @@ namespace Ea{
 		}
 		#region KEY VALUE 
 		#region VARIABLE
-		static Dictionary<string,float>_dataFloat;
-		static Dictionary<string,int>_dataInt;
-		static Dictionary<string,bool> _dataBool;
-		static Dictionary<string,string> _dataString;
+		static EaDictionary<string,float>_dataFloat;
+		static EaDictionary<string,int>_dataInt;
+		static EaDictionary<string,bool> _dataBool;
+		static EaDictionary<string,string> _dataString;
 
-		public static Dictionary<string,float> dataFloat{get{return _dataFloat ?? (_dataFloat =  LoadData<float>( _dataFloat));}}
-		public	static Dictionary<string,int> dataInt{get{ return _dataInt ??(_dataInt =  LoadData<int>( _dataInt));}}
-		public	static Dictionary<string,bool> dataBool{get {return _dataBool ??(_dataBool = LoadData<bool>( _dataBool));}}
-		public	static Dictionary<string,string>dataString{get{ return _dataString ?? (_dataString = LoadData<string>( _dataString));}}
+		public static EaDictionary<string,float> dataFloat{get{return _dataFloat ?? (_dataFloat =  LoadData<float>( ));}}
+		public	static EaDictionary<string,int> dataInt{get{ return _dataInt ??(_dataInt =  LoadData<int>( ));}}
+		public	static EaDictionary<string,bool> dataBool{get {return _dataBool ??(_dataBool = LoadData<bool>( ));}}
+		public	static EaDictionary<string,string>dataString{get{ return _dataString ?? (_dataString = LoadData<string>( ));}}
 
 
 		#endregion
 
 		#region RETURN VALUE
-		static Dictionary<string,T>  LoadData<T>(Dictionary<string,T> data){
-			EaKv<T> fileData =Open<EaKv<T>>(typeof(T).Name);
-				data = fileData.keyValues;
-				return data;
+		static EaDictionary<string,T>  LoadData<T>(){
+			EaDictionary<string,T> fileData =Open<EaDictionary<string,T>>(typeof(T).Name);
+			return fileData;
 
 		}
 		#endregion
 		[System.Serializable]
-		class EaKv<T> : EaSerializable{public Dictionary<string,T> keyValues = new Dictionary<string,T>();}
+	public	class EaKv<T> : EaSerializable{
 
+			[SerializeField]
+			private List<string> Keys;
+			[SerializeField]
+			private	 List<T> Values;
+
+			public EaKv(){
+				Keys = new List<string>();
+				Values = new List<T>();
+			
+			}
+			public bool ContainsValue(T value){
+				return (Values.FirstOrDefault (v => v.Equals(value)).is_avaiable () ? true : false);
+			}
+			public void Add(string key,T value){
+				if (ContainsKey (key))
+					throw new DuplicateKeyException ();
+				
+				Keys.Add (key);
+				Values.Add (value);
+				Debug.LogFormat ("Key: {0},Values: {1}", key, value);
+			}
+			public void Remove(string key){
+				int index = Keys.IndexOf (key);
+				if(index == -1)
+					throw  new KeyNotFoundException();
+				
+				Keys.RemoveAt(index);
+				Values.RemoveAt(index);
+
+				
+			}
+			public void Clear(){
+				if (Keys != null && Values != null) {
+					Keys.Clear ();
+					Values.Clear ();
+				}
+			}
+			public   T this [string key]{
+				get{
+					int index = Keys.IndexOf (key);
+					if (index == -1)
+						throw new KeyNotFoundException ();
+					
+					return Values [index];
+				}
+				set{ 
+					Add (key, value);
+
+				}
+			} 
+			public bool ContainsKey(string key){
+				return (Keys.FirstOrDefault (k => k == key) != null ? true : false);
+			}
+		}
+		public class DuplicateKeyException : Exception{
+			public override string Message {
+				get {
+					return "Duplicate key";
+				}
+			}
+		}
 		#endregion
 
 	}

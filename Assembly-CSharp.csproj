@@ -121,6 +121,7 @@
      <Compile Include="Assets\Ea\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\RandomPlacementFunction.cs" />
      <Compile Include="Assets\Ea\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SineWavePlacementFunction.cs" />
      <Compile Include="Assets\Ea\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SpirographPlacementFunction.cs" />
+     <Compile Include="Assets\Ea\Scripts\Core\Collection\EaDictionary.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Component\EaMenu.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Component\EaMobile.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Component\EaSceneManager.cs" />
@@ -368,6 +369,7 @@
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
      <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
+     <None Include="Assets\Ea\Files\(EaKv`1)Single.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
      <None Include="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
@@ -375,12 +377,11 @@
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.31.0.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
-     <None Include="Assets\Ea\Files\(Erudejade).xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Readme.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
+     <None Include="Assets\Ea\Files\(EaDictionary`2)Single.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\link.xml" />
-     <None Include="Assets\Ea\Files\(KvData`1)Single.xml" />
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
      <None Include="Assets\GooglePlayGames\Editor\template-Constants.txt" />
      <None Include="Assets\GooglePlayGames\GooglePlayGamesDeps-gpm.dep.xml" />
@@ -410,22 +411,22 @@
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Editor">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization.Config">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

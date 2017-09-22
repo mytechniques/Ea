@@ -5,12 +5,11 @@ using Ea;
 using UnityEngine.Advertisements;
 
 public class EaAdManager : Singleton<EaAdManager> {
-	float data = 5;
+	
 	void Start () {
 		EaMobile.Initialize (Mobile.Advertisement);
 		EaAdvertisement.Create (AdType.BANNER_TOP, AdType.BANNER_BOTTOM, AdType.INTERSTITIAL);
-		EaFileSystem.SetFloat ("mydata", data);
-		Debug.Log(EaFileSystem.GetFloat("mydata"));
+		Debug.Log(EaFileSystem.GetFloat("hello"));
 	}
 
 
