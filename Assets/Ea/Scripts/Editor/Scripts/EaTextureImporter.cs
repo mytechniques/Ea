@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Reflection;
 using Ea;
-using Ea.Editor;
+using EaEditor;
 
 namespace Ea.Editor{
 public delegate void GetTextureSize(TextureImporter textureImporter,ref int width,ref int height);

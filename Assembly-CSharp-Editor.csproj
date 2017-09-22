@@ -78,7 +78,6 @@
      <Compile Include="Assets\GooglePlayGames\Editor\xcode\Utils.cs" />
      <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
-     <None Include="Assets\Ea\Files\(TestData)erudejade.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
      <None Include="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
@@ -86,10 +85,12 @@
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.31.0.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
+     <None Include="Assets\Ea\Files\(Erudejade).xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Readme.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\link.xml" />
+     <None Include="Assets\Ea\Files\(KvData`1)Single.xml" />
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
      <None Include="Assets\GooglePlayGames\Editor\template-Constants.txt" />
      <None Include="Assets\GooglePlayGames\GooglePlayGamesDeps-gpm.dep.xml" />

@@ -556,7 +556,6 @@ GameObject:
   - component: {fileID: 401213636}
   - component: {fileID: 401213635}
   - component: {fileID: 401213634}
-  - component: {fileID: 401213639}
   - component: {fileID: 401213640}
   - component: {fileID: 401213641}
   m_Layer: 0
@@ -636,17 +635,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &401213639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401213633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f37fbff8474c34710b78e9f354f85efe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &401213640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,7 +643,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 401213633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5423751f2e9cb418eb1330cc4cbc18a4, type: 3}
+  m_Script: {fileID: 11500000, guid: f37fbff8474c34710b78e9f354f85efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &401213641
@@ -840,7 +828,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 401213639}
+      - m_Target: {fileID: 0}
         m_MethodName: SHOW_ALL_BANNER
         m_Mode: 1
         m_Arguments:
@@ -1319,7 +1307,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 401213639}
+      - m_Target: {fileID: 0}
         m_MethodName: SHOW_INTERSTITIAL
         m_Mode: 1
         m_Arguments:
@@ -1441,7 +1429,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 401213639}
+      - m_Target: {fileID: 0}
         m_MethodName: SHOW_VIDEO
         m_Mode: 1
         m_Arguments:
@@ -1563,7 +1551,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 401213639}
+      - m_Target: {fileID: 0}
         m_MethodName: HIDE_ALL_BANNER
         m_Mode: 1
         m_Arguments:

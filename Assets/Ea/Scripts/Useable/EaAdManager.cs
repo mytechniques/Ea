@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ea;
 using UnityEngine.Advertisements;
-[System.Serializable]
-public class TestData : EaSerializable{public int somedata;}
+
 public class EaAdManager : Singleton<EaAdManager> {
+	float data = 5;
 	void Start () {
 		EaMobile.Initialize (Mobile.Advertisement);
 		EaAdvertisement.Create (AdType.BANNER_TOP, AdType.BANNER_BOTTOM, AdType.INTERSTITIAL);
-		TestData d = EaFileSystem.Open <TestData>("erudejade");
-		SHOW_ALL_BANNER ();
+		EaFileSystem.SetFloat ("mydata", data);
+		Debug.Log(EaFileSystem.GetFloat("mydata"));
 	}
 
 

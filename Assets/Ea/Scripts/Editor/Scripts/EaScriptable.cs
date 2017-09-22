@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using UnityEditor;
 using Ea;
-namespace Ea.Editor{
+namespace EaEditor{
 
 public static class EaScriptable  {
 

@@ -732,22 +732,23 @@ public  static class EaExtension {
 	}
 
 
-	namespace Editor{
-		public static class EaEditorExtension{
-			#region EDITOR
-			#if UNITY_EDITOR
-			public static Texture GetUnityTexture<T>(){
-				return UnityEditor.EditorGUIUtility.ObjectContent (null, typeof(T)).image;
 
-			}
-			public static T ObjectField<T>(T value,bool allowSeneObject = false) where T : UnityEngine.Object{
-				return (T)UnityEditor.EditorGUILayout.ObjectField (value, typeof(T), allowSeneObject);
-			}
-		
-			#endif
-			#endregion
-		}
+
+
+}
+namespace EaEditor{
+public static class EaEditorExtension{
+	#region EDITOR
+	#if UNITY_EDITOR
+	public static Texture GetUnityTexture<T>(){
+		return UnityEditor.EditorGUIUtility.ObjectContent (null, typeof(T)).image;
+
+	}
+	public static T ObjectField<T>(T value,bool allowSeneObject = false) where T : UnityEngine.Object{
+		return (T)UnityEditor.EditorGUILayout.ObjectField (value, typeof(T), allowSeneObject);
 	}
 
-
+	#endif
+	#endregion
+	}
 }

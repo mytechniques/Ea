@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Name: EaAdvertisement
   m_EditorClassIdentifier: 
   isSingleBanner: 1
+  testBannerHeight: 75
   googleDebug: 0
   eaDebug: 1
   banner: ca-app-pub-3879807251614613/1317181881
   bannerTop: ca-app-pub-3879807251614613/1317181881
   bannerBottom: ca-app-pub-3879807251614613/1317181881
-  adSize: 1
+  adSize: 0
   interstitial: ca-app-pub-3879807251614613/2390652689

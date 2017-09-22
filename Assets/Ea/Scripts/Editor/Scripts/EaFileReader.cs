@@ -12,7 +12,7 @@ using System.Linq;
 using System;
 using System.Text.RegularExpressions;
 using Object = UnityEngine.Object;
-namespace Ea.Editor{
+namespace EaEditor{
 public class EaFileReader  : EditorWindow {
 //	public static TextAsset file;
 	public static IEaSerializable decodeType;

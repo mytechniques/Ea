@@ -130,7 +130,7 @@
      <Compile Include="Assets\Ea\Scripts\Core\Pattern\PoolMechanism.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Pattern\Singleton.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\System\EaExtension.cs" />
-     <Compile Include="Assets\Ea\Scripts\Core\System\EaFileSystem.cs" />
+     <Compile Include="Assets\Ea\Scripts\Core\System\EaSystem.cs" />
      <Compile Include="Assets\Ea\Scripts\Debug\EaBanner.cs" />
      <Compile Include="Assets\Ea\Scripts\Debug\EaInterstitial.cs" />
      <Compile Include="Assets\Ea\Scripts\Debug\SceneA.cs" />
@@ -138,15 +138,15 @@
      <Compile Include="Assets\Ea\Scripts\Debug\TEST.cs" />
      <Compile Include="Assets\Ea\Scripts\Scriptable\EaAdvertisement.cs" />
      <Compile Include="Assets\Ea\Scripts\Scriptable\EaFile.cs" />
-     <Compile Include="Assets\Ea\Scripts\Scriptable\EaLeaderboard.cs" />
      <Compile Include="Assets\Ea\Scripts\Scriptable\EaSocial.cs" />
      <Compile Include="Assets\Ea\Scripts\Scriptable\EaTexture.cs" />
      <Compile Include="Assets\Ea\Scripts\Useable\EaAdManager.cs" />
      <Compile Include="Assets\Ea\Scripts\Useable\EaAnimation.cs" />
      <Compile Include="Assets\Ea\Scripts\Useable\EaCamera.cs" />
+     <Compile Include="Assets\Ea\Scripts\Useable\EaFileSystem.cs" />
+     <Compile Include="Assets\Ea\Scripts\Useable\EaLeaderboard.cs" />
      <Compile Include="Assets\Ea\Scripts\Useable\EaListener.cs" />
      <Compile Include="Assets\Ea\Scripts\Useable\EaRotation.cs" />
-     <Compile Include="Assets\Ea\Scripts\Useable\EaSocialPlatforms.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\AdFailedToLoadEventArgs.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\AdLoader.cs" />
      <Compile Include="Assets\GoogleMobileAds\Api\AdPosition.cs" />
@@ -368,7 +368,6 @@
      <Compile Include="Assets\GooglePlayGames\PluginVersion.cs" />
      <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
-     <None Include="Assets\Ea\Files\(TestData)erudejade.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
      <None Include="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
@@ -376,10 +375,12 @@
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.31.0.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
+     <None Include="Assets\Ea\Files\(Erudejade).xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Readme.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
      <None Include="Assets\PlayServicesResolver\proguard-messaging-workaround.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\link.xml" />
+     <None Include="Assets\Ea\Files\(KvData`1)Single.xml" />
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
      <None Include="Assets\GooglePlayGames\Editor\template-Constants.txt" />
      <None Include="Assets\GooglePlayGames\GooglePlayGamesDeps-gpm.dep.xml" />

@@ -1,11 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ea/Scripts/Scriptable/EaAdvertisement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ea/Scripts/Debug/EaBanner.cs">
     <Files>
-      <File FileName="Assets/Ea/Scripts/Scriptable/EaAdvertisement.cs" Line="264" Column="84" />
-      <File FileName="Assets/Ea/Scripts/Debug/EaBanner.cs" Line="16" Column="3" />
-      <File FileName="Assets/Ea/Scripts/Core/System/EaExtension.cs" Line="71" Column="3" />
-      <File FileName="Assets/Ea/Scripts/Useable/EaAdManager.cs" Line="13" Column="22" />
+      <File FileName="Assets/Ea/Scripts/Scriptable/EaAdvertisement.cs" Line="82" Column="13" />
+      <File FileName="Assets/Ea/Scripts/Debug/EaBanner.cs" Line="15" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

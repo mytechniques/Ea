@@ -13,7 +13,6 @@ public  class EaBanner : MonoBehaviour  {
 		public void ClickAd(){
 			Application.OpenURL ("https://eaunity.wordpress.com/");
 		}
-
 	}
 
 }

@@ -16,6 +16,7 @@ namespace Ea{
 		INTERSTITIAL,
 	}
 public class EaAdvertisement : ScriptableObject {
+		#region IENUMERATOR
 		public enum EaAdSize
 		{
 			BANNER,
@@ -28,19 +29,19 @@ public class EaAdvertisement : ScriptableObject {
 		public enum Banner{
 			SINGLE_ID,
 			MULTIPLER_ID,
-
 		}
 	
-
+		#endregion
+		#region SERIALIZABLE VARIABLE
 
 		[HideInInspector]
 		public bool isSingleBanner = true;
 
-		[TabGroup("EaAdvertisement","Debug"),PropertyOrder(1)]
-		public bool googleDebug,eaDebug;
-		[TabGroup("EaAdvertisement","Debug"),PropertyOrder(0)]
+		[TabGroup("EaAdvertisement","Debug"),PropertyOrder(2)][Range(50,200)]
 		public int testBannerHeight = 100;
 
+		[TabGroup("EaAdvertisement","Debug"),PropertyOrder(1)]
+		public bool googleDebug,eaDebug;
 
 		[TabGroup("EaAdvertisement","Banner"),ShowIf("isSingleBanner")]
 		public string banner;
@@ -48,9 +49,9 @@ public class EaAdvertisement : ScriptableObject {
 		[TabGroup("EaAdvertisement","Banner"),HideIf("isSingleBanner")]
 		public string bannerTop,bannerBottom;
 
-
 		[TabGroup("EaAdvertisement","Banner")]
 		public  EaAdSize adSize= EaAdSize.SMART_BANNER;
+
 		[TabGroup("EaAdvertisement","Banner")]
 		public  Banner bannerType  {
 			get {return _bannerType;}
@@ -61,9 +62,13 @@ public class EaAdvertisement : ScriptableObject {
 		}
 
 		private Banner _bannerType = Banner.SINGLE_ID;
-	
-	[TabGroup("EaAdvertisement","Interstitial")]
-	public string  interstitial;
+
+
+		[TabGroup("EaAdvertisement","Interstitial")]
+		public string  interstitial;
+
+		#endregion
+		#region MEMBER VARIABLE
 		public const string reawardPlacementId = "rewardedVideo";
 		public const string videoPlacementId = "video";
 		static bool initalized;
@@ -73,9 +78,9 @@ public class EaAdvertisement : ScriptableObject {
 		static InterstitialAd interstitialAd;
 		private static EaAdvertisement _EaAd;
 		public static EaAdvertisement EaAd{ get {return _EaAd ?? (_EaAd = Resources.Load<EaAdvertisement> (typeof(EaAdvertisement).Name)); }set{_EaAd = value;} }
-
 		public static EaBanner dummyBannerTop, dummyBannerBottom;
-		#region USEABLE
+		#endregion
+		#region PUBLIC METHOD
 		public static void ShowVideo(){
 			if (Advertisement.IsReady ("video"))
 				Advertisement.Show ();
@@ -172,8 +177,19 @@ public class EaAdvertisement : ScriptableObject {
 			});
 
 		}
+		public static void Initialize(){
+			if (initalized)
+				return;
+
+			initalized = true;
+			if(EaAd.eaDebug)Debug.Log ("EaAdvetisement initialized!".color("0000FF"));
+			EaAd = Resources.Load<EaAdvertisement> ("EaAdvertisement");
+			CreateBanner (out bannerTopAd,GetBanner(AdPosition.Top), AdPosition.Top);
+			CreateBanner (out bannerBottomAd, GetBanner(AdPosition.Bottom), AdPosition.Bottom);
+			CreateInterstitial ();
+		}
 		#endregion
-		#region MEMBER CALLBACK
+		#region PRIVATE METHOD
 		 static void HideBanner(ref BannerView banner){
 			if (banner != null) {
 				banner.Hide ();
@@ -201,17 +217,7 @@ public class EaAdvertisement : ScriptableObject {
 			else
 				if(EaAd.eaDebug)Debug.LogWarning ("BANNER wasn't loaded!\n Show failed.");
 		}
-		public static void Initialize(){
-			if (initalized)
-				return;
-
-			initalized = true;
-			if(EaAd.eaDebug)Debug.Log ("EaAdvetisement initialized!".color("0000FF"));
-			EaAd = Resources.Load<EaAdvertisement> ("EaAdvertisement");
-			CreateBanner (out bannerTopAd,GetBanner(AdPosition.Top), AdPosition.Top);
-			CreateBanner (out bannerBottomAd, GetBanner(AdPosition.Bottom), AdPosition.Bottom);
-			CreateInterstitial ();
-		}
+	
 		static void CreateInterstitial(){
 			AdRequest request = new AdRequest.Builder ().Build ();
 			interstitialAd = new InterstitialAd (EaAd.interstitial);
@@ -292,8 +298,6 @@ public class EaAdvertisement : ScriptableObject {
 				interstitial.rect.localScale = Vector3.one;
 				interstitial.rect.localPosition = Vector2.zero;
 				interstitial.rect.SetParent(canvas.transform,false);
-
-//				FindObjectOfType<UnityEngine.EventSystems.EventSystem>().
 				break;
 				CREATE_BANNER:
 				if((BANNER_POSITION == 1 && dummyBannerTop != null) || (BANNER_POSITION == -1 && dummyBannerBottom != null))
@@ -369,7 +373,7 @@ public class EaAdvertisement : ScriptableObject {
 
 		#endregion
 
-		#region PROPERTIES 
+		#region RETURN VALUE 
 		static AdSize GetAdSize(){
 			switch (EaAd.adSize) {
 			case EaAdSize.BANNER:
