@@ -78,6 +78,7 @@
      <Compile Include="Assets\GooglePlayGames\Editor\xcode\Utils.cs" />
      <None Include="Assets\PlayServicesResolver\proguard-unity.txt" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
+     <None Include="Assets\Ea\Files\(TestData)erudejade.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
      <None Include="Assets\Plugins\Android\MainLibProj\AndroidManifest.xml" />
      <None Include="Assets\Ea\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
@@ -160,34 +161,34 @@
  <HintPath>/Applications/Unity 2017/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Editor">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization.Config">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
  <Reference Include="GeneratedOdinEditors">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Editor/GeneratedOdinEditors.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/Ea/Plugins/Sirenix/Assemblies/Editor/GeneratedOdinEditors.dll</HintPath>
  </Reference>
  <Reference Include="Google.IOSResolver_v1.2.31.0">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.31.0.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.31.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.JarResolver_v1.2.31.0">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.31.0.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.31.0.dll</HintPath>
  </Reference>
  <Reference Include="Google.VersionHandler_v1.2.31.0">
- <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Assets/PlayServicesResolver/Editor/Google.VersionHandler_v1.2.31.0.dll</HintPath>
+ <HintPath>/Users/vukhanhhung/Desktop/Ea/Ea/Ea/Assets/PlayServicesResolver/Editor/Google.VersionHandler_v1.2.31.0.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity 2017/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

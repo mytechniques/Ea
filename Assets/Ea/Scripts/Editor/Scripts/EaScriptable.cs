@@ -32,15 +32,18 @@ public static class EaScriptable  {
 
 
 	[MenuItem("Ea/Settings/Advertisement")]
-	public static void Advetisement(){
+	public static void AdvetisementSettings(){
 		EaScriptable.CreateAsset<EaAdvertisement> ();
 	}
 
 		[MenuItem("Ea/Settings/Texture")]
 		public static void TextureSettings(){
-			EaScriptable.CreateAsset<EaTextureSetting> ();
+			EaScriptable.CreateAsset<EaTexture> ();
 		}
-
+		[MenuItem("Ea/Settings/File")]
+		public static void FileSettings(){
+			EaScriptable.CreateAsset<EaFile> ();
+		}
 
 	public static string Directory{
 		get{ 

@@ -35,7 +35,7 @@ namespace Ea
 					EaAdvertisement.Initialize ();
 					break;
 				case Mobile.Leaderboard:
-					EaSocial.Instance.Initialize ();
+					EaSocial.Initialize ();
 					break;
 				}
 
@@ -45,6 +45,7 @@ namespace Ea
 
 	
 		void OnApplicationQuit(){
+			
 				onQuit.Invoke ();
 		}
 		void OnApplicationPause(bool status){
