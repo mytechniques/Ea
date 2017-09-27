@@ -122,6 +122,7 @@
      <Compile Include="Assets\Ea\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SineWavePlacementFunction.cs" />
      <Compile Include="Assets\Ea\Plugins\Sirenix\Demos\Odin Inspector\Scripts\Object Placement Demo\PlacementFunctions\SpirographPlacementFunction.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Collection\EaDictionary.cs" />
+     <Compile Include="Assets\Ea\Scripts\Core\Component\EaComponent.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Component\EaMenu.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Component\EaMobile.cs" />
      <Compile Include="Assets\Ea\Scripts\Core\Component\EaSceneManager.cs" />
