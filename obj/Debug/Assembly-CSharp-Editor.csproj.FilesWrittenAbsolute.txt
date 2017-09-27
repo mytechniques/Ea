@@ -50,3 +50,4 @@
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.Editor.dll

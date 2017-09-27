@@ -28,3 +28,4 @@
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/obj/Debug/Assembly-CSharp.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.Editor.dll
