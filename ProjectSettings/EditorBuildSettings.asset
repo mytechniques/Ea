@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AndroidNative.unity
+    path: Assets/Ea/AndroidNative.unity
     guid: 1d89a43e576d9451391ab93f7e0801a6
   - enabled: 1
     path: Assets/Ea/Scenes/Scene.unity

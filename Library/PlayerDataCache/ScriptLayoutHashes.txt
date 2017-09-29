@@ -200,7 +200,7 @@ cc8f31e82b02d7648aefdbfe84c58f8d Assembly-CSharp.dll:Sirenix.OdinInspector.Demos
 54106f55b99c931a7eca947c167d7cfb Assembly-CSharp.dll:Sirenix.OdinInspector.Demos.PrefabRelatedAttributesExamples
 55929bbc3aff3c880bc00a6afa39e50e Assembly-CSharp.dll:Sirenix.OdinInspector.Demos.NoBoilerplate
 05524b8f659e7bfe5756d1335fec24ba Sirenix.Utilities.dll:Sirenix.Utilities.ProjectPathFinder
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:Ea.TEST
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.TEST
 05524b8f659e7bfe5756d1335fec24ba Sirenix.Utilities.dll:Sirenix.Utilities.ProjectPathFinder
 1abc7dd7aee19d4e8f5fce92bfb9e276 Assembly-CSharp.dll:Sirenix.OdinInspector.Demos.CustomDrawerExample
 3778f64b82ee2c5b63cdb21a8d3e2497 Assembly-CSharp.dll:Sirenix.OdinInspector.Demos.DisableInEditorAndPlayModeExamples

@@ -1,40 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Ea{
+using System;
 public class TEST : MonoBehaviour {
 
-	// Use this for initialization
-	public void Show	 () {
-				using (AndroidJavaClass javClass = new AndroidJavaClass ("com.unity3d.player.UnityPlayer"))
-				using (AndroidJavaObject javDialog = new AndroidJavaObject ("com.ea.uj.Dialog")) {
-					AndroidJavaObject javContext = javClass.GetStatic<AndroidJavaObject> ("currentActivity");
-					AndroidJavaObject setDialog = javDialog.CallStatic<AndroidJavaObject> ("instance");
-				setDialog.Call ("setContext", javContext);
-				javContext.Call("runOnUiThread",new AndroidJavaRunnable(()=>{
-					using (AndroidJavaObject javRect  = new AndroidJavaObject("com.ea.uj.Rect",0,1,25,25))
-						setDialog.Call("ShowDialog","erudejade",0,javRect);
-				}));
-			}
+		void OnGUI(){
+			if (GUI.Button (new Rect ((Screen.width / 2)  - 100, Screen.height / 60, 200, 50), "Share Text")) 
+				CallIntent((i,u)=>i.Call("ShareText",u,"erudejade","#erudejade"));
+
+			if (GUI.Button (new Rect ((Screen.width / 2)  - 100, (Screen.height / 60) + 55, 200, 50), "Send mail")) 
+				CallIntent((i,u)=>i.Call("SendMail",u,"#feedback","Leave us your comment",new String[]{"dunnoprice@gmail.com","tmtudev@gmail.com"}));
+		
+			if (GUI.Button (new Rect ((Screen.width / 2)  - 100, (Screen.height / 60) + 110, 200, 50), "Notify")) 
+				CallIntent((i,u)=>i.Call("PushNotification",u));
+		
+		}
+	IEnumerator	 Start(){
+		yield return new WaitForSeconds (10);
+		CallIntent((i,u)=>i.Call("PushNotification",u));
+
 	}
-		public void Share(){
-			using (AndroidJavaClass unityActivity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer")) {
-				AndroidJavaObject currentActivity = unityActivity.GetStatic<AndroidJavaObject> ("currentActivity");
-				AndroidJavaObject intent = new AndroidJavaObject ("com.ea.uj.Share");
-				currentActivity.Call ("startActivity",  intent.Call<AndroidJavaObject> ("Text","share text"));
-			}
-		}
-	// Update is called once per frame
-	void Update () {
-//			if (Input.GetKeyDown (KeyCode.Alpha0) || Input.touchCount == 1)
-//				Ea.EaSceneManager.Load ("menu");
-//			if (Input.GetKeyDown (KeyCode.Alpha1) || Input.touchCount == 2)
-//				Ea.EaSceneManager.Load ("game");
-//			if (Input.GetKeyDown (KeyCode.Alpha2) || Input.touchCount == 3)
-//				Ea.EaSceneManager.Load ("game1");
-//			if(Input.GetKeyDown(KeyCode.R))
-//				UnityEngine.SceneManagement.SceneManager.LoadScene(0x00);
-				
-		}
+
+	void CallIntent(Action<AndroidJavaObject,AndroidJavaObject> iCallback){
+		AndroidJavaClass unityPlayer = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
+		AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject> ("currentActivity");
+		AndroidJavaObject intent = new AndroidJavaObject ("com.ea.uj.EaIntent");
+		iCallback.Invoke(intent,currentActivity);
+
 	}
 }
