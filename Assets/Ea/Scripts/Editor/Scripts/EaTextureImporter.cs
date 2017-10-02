@@ -13,7 +13,7 @@ public delegate void GetTextureSize(TextureImporter textureImporter,ref int widt
 	EaTexture _setting;
 	EaTexture setting{
 		get{
-			return _setting ??(_setting = Resources.Load<EaTexture>("EaTextureSetting"));
+				return _setting ??(_setting = Resources.Load<EaTexture>(typeof(EaTexture).Name));
 		}
 	}
 	void OnPreprocessTexture(){

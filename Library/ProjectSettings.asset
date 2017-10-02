@@ -141,7 +141,7 @@ PlayerSettings:
   targetPixelDensity: 0
   resolutionScalingMode: 0
   applicationIdentifier:
-    Android: com.test.ta
+    Android: com.ea.unity
     Standalone: com.eru.dj
   buildNumber: {}
   AndroidBundleVersionCode: 1

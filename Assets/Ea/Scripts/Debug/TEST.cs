@@ -5,27 +5,14 @@ using System;
 public class TEST : MonoBehaviour {
 
 		void OnGUI(){
-			if (GUI.Button (new Rect ((Screen.width / 2)  - 100, Screen.height / 60, 200, 50), "Share Text")) 
-				CallIntent((i,u)=>i.Call("ShareText",u,"erudejade","#erudejade"));
-
-			if (GUI.Button (new Rect ((Screen.width / 2)  - 100, (Screen.height / 60) + 55, 200, 50), "Send mail")) 
-				CallIntent((i,u)=>i.Call("SendMail",u,"#feedback","Leave us your comment",new String[]{"dunnoprice@gmail.com","tmtudev@gmail.com"}));
-		
-			if (GUI.Button (new Rect ((Screen.width / 2)  - 100, (Screen.height / 60) + 110, 200, 50), "Notify")) 
-				CallIntent((i,u)=>i.Call("PushNotification",u));
-		
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, Screen.height / 60, 200, 50), "Share Text"))
+			EaMobile.ShareText ("Hello");
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, (Screen.height / 60) + 55, 200, 50), "Send mail"))
+			EaMobile.SendMail ("WELCOME", "CONTENT MAIL", "dunnoprice@gmail.com");
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, (Screen.height / 60) +  55 + 55, 200, 50), "Push notification"))
+			EaMobile.PushNotification ("Buble","You have received an gift!",5L);
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, (Screen.height / 60) + 55 + 55 + 55, 200, 50), "Message"))
+			EaMobile.ShowMessage ("You pressed the button",0,new MsgLayout(hLayout.Center,vLayout.Top,0,15));
 		}
-	IEnumerator	 Start(){
-		yield return new WaitForSeconds (10);
-		CallIntent((i,u)=>i.Call("PushNotification",u));
 
-	}
-
-	void CallIntent(Action<AndroidJavaObject,AndroidJavaObject> iCallback){
-		AndroidJavaClass unityPlayer = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
-		AndroidJavaObject currentActivity = unityPlayer.GetStatic<AndroidJavaObject> ("currentActivity");
-		AndroidJavaObject intent = new AndroidJavaObject ("com.ea.uj.EaIntent");
-		iCallback.Invoke(intent,currentActivity);
-
-	}
 }
