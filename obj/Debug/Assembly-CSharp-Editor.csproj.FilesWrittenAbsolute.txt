@@ -4,6 +4,7 @@
 /Users/vukhanhhung/Desktop/Ea/Ea/obj/Debug/Assembly-CSharp-Editor.dll.mdb
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEditor.dll
+/Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEditor.Advertisements.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.UI.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEditor.UI.dll
@@ -50,4 +51,3 @@
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.Editor.dll
-/Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.dll

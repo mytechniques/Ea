@@ -34,10 +34,10 @@ public class EaMenu : EaSceneObject {
 			gameObject.SetActive (true);
 				switch (loadEvent.transition) {
 				case Transition.Scale:
-					Scale (loadEvent.begin, loadEvent.end,null);
+					Scale (loadEvent.begin, loadEvent.end,()=>EaSceneManager.isLoading  = false);
 				break;
 				case Transition.Translate:
-					Translate (loadEvent.begin, loadEvent.end,null);
+					Translate (loadEvent.begin, loadEvent.end,()=>EaSceneManager.isLoading  = false);
 				break;
 			}
 		}

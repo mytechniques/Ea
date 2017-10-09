@@ -1,6 +1,7 @@
-public enum EaSortingLayer
-{
-	Default,
-	Layer,
-	Eru,
-}
+namespace EaEditor { 
+ public enum EaSortingLayer{
+		Default,
+		Layer,
+		Eru,
+	} 
+ }

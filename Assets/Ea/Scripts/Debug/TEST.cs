@@ -1,24 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Ea{
+using System;
 public class TEST : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-			Ea.EaSceneManager.Load ("menu");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-			if (Input.GetKeyDown (KeyCode.Alpha0) || Input.touchCount == 1)
-				Ea.EaSceneManager.Load ("menu");
-			if (Input.GetKeyDown (KeyCode.Alpha1) || Input.touchCount == 2)
-				Ea.EaSceneManager.Load ("game");
-			if (Input.GetKeyDown (KeyCode.Alpha2) || Input.touchCount == 3)
-				Ea.EaSceneManager.Load ("game1");
-			
-				
+		void OnGUI(){
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, Screen.height / 60, 200, 50), "Share Text"))
+			EaMobile.ShareText ("Hello");
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, (Screen.height / 60) + 55, 200, 50), "Send mail"))
+			EaMobile.SendMail ("WELCOME", "CONTENT MAIL", "dunnoprice@gmail.com");
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, (Screen.height / 60) +  55 + 55, 200, 50), "Push notification"))
+			EaMobile.PushNotification ("Buble","You have received an gift!",5L);
+		if (GUI.Button (new Rect ((Screen.width / 2) - 100, (Screen.height / 60) + 55 + 55 + 55, 200, 50), "Message"))
+			EaMobile.ShowMessage ("You pressed the button",0,new MsgLayout(hLayout.Center,vLayout.Top,0,15));
 		}
-	}
+
 }

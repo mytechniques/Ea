@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using Ea;
-using Ea.Editor;
+using EaEditor;
 using System.Reflection;
 using ue = UnityEngine;
 using Sirenix.OdinInspector;
-
+namespace EaEditor{
 [System.Serializable]
 public class EaFinder : EditorWindow{
 	#region VARIABLE 
@@ -466,14 +466,14 @@ static	float enumWidth {
 		string filePathAndName = path + name + ".cs"; //The folder Scripts/Enums/ is expected to exist
 
 		using ( System.IO.StreamWriter streamWriter = new System.IO.StreamWriter( filePathAndName) )
-		{
-			streamWriter.WriteLine( "public enum " + name );
-			streamWriter.WriteLine( "{" );
+		{	
+				
+			streamWriter.WriteLine( "namespace EaEditor { \n public enum " + name +"{");
 			for( int i = 0; i < values.Length; i++ )
 			{
-				streamWriter.WriteLine( "\t" + values[i] + "," );
+				streamWriter.WriteLine( "\t\t" + values[i] + "," );
 			}
-			streamWriter.WriteLine( "}" );
+				streamWriter.WriteLine( "\t} \n }" );
 		}
 		AssetDatabase.Refresh();
 	}
@@ -481,5 +481,6 @@ static	float enumWidth {
 
 
 	#endregion
+	}
 }
 	

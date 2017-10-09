@@ -1,5 +1,6 @@
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEditor.dll
+/Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.UI.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Networking.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.TestRunner.dll
@@ -28,4 +29,3 @@
 /Users/vukhanhhung/Desktop/Ea/Ea/obj/Debug/Assembly-CSharp.dll
 /Users/vukhanhhung/Desktop/Ea/Ea/obj/Debug/Assembly-CSharp.dll.mdb
 /Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.Editor.dll
-/Users/vukhanhhung/Desktop/Ea/Ea/Temp/bin/Debug/UnityEngine.Advertisements.dll

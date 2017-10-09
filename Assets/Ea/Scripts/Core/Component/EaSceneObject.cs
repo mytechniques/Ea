@@ -48,6 +48,7 @@ namespace Ea{
 			rect.localPosition = position;
 			rect.rotation = rotation;
 			rect.localScale = localScale;
+			EaSceneManager.isLoading = true;
 		}
 		public Vector3 position{ get; set;}
 		public Quaternion rotation { get; set;}

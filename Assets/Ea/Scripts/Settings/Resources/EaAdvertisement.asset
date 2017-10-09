@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a7ca57e27540431a868180399dd605c, type: 3}
   m_Name: EaAdvertisement
   m_EditorClassIdentifier: 
-  isSingleBanner: 0
+  isSingleBanner: 1
+  testBannerHeight: 75
   googleDebug: 0
   eaDebug: 1
   banner: ca-app-pub-3879807251614613/1317181881

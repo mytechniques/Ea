@@ -4,15 +4,16 @@ using UnityEngine;
 using UnityEditor;
 using System.Reflection;
 using Ea;
-using Ea.Editor;
+using EaEditor;
 
+namespace Ea.Editor{
 public delegate void GetTextureSize(TextureImporter textureImporter,ref int width,ref int height);
 	public  class EaTextureImporter : AssetPostprocessor {
 	GetTextureSize textureSizeDelegate;
-	EaTextureSetting _setting;
-	EaTextureSetting setting{
+	EaTexture _setting;
+	EaTexture setting{
 		get{
-			return _setting ??(_setting = Resources.Load<EaTextureSetting>("EaTextureSetting"));
+				return _setting ??(_setting = Resources.Load<EaTexture>(typeof(EaTexture).Name));
 		}
 	}
 	void OnPreprocessTexture(){
@@ -54,6 +55,7 @@ public delegate void GetTextureSize(TextureImporter textureImporter,ref int widt
 		public override string ToString ()
 		{
 			return string.Format("Width: {0} , Height: {1}",width,height);
+		}
 		}
 	}
   
